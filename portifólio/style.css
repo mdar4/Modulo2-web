@@ -90,6 +90,7 @@ section.two {
     justify-content: center;
     align-items: center;
     padding: 10rem;
+    background-color: #c4c0e7;
 
 }
 .text {
@@ -259,7 +260,6 @@ section.project {
 }
 .hab h2 {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 2rem;
 }
 .hab p {
@@ -312,3 +312,74 @@ section.project {
     text-align: end;
     border-radius: 0.9rem;
   }
+
+/*---------------------------------------------*/
+section#contato {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contato form {
+    display: flex;
+    
+}
+#contato h1 {
+    margin-bottom: 2rem;
+}
+#contato .container {
+    min-height: 400px;
+    width: 300px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#contato input{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+#contato .login-input-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 26px;
+    background-color: #cfcfcf ;
+    transition: 3s ease-in-out;
+}
+
+#contato .login-input-border::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 36px;
+    background: #4b086d;
+    transition: 3s ease-in-out;
+}
+#contato button:focus + .login-input-border::after{
+    width: 100%;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
