@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Style-->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <title>Portifólio</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
             <p>George Eliot</p>
         </div>
         <div id="image" >
-            <img width="450px" src="/img/img/—Pngtree—playing computer computer hand painted_3843004.png" alt="">
+            <img width="450px" src="/static/img/—Pngtree—playing computer computer hand painted_3843004.png" alt="">
         </div>
     </section>
     <hr>
@@ -54,25 +54,25 @@
     <hr>
     <section class="project">
         <div class="card">
-            <img src="/img/img/img-lerem.png" alt="">
+            <img src="/static/img/img-lerem.png" alt="">
             <h1>Projeto 1</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
             <button>Veja mais</button>
         </div>
         <div class="card">
-            <img src="/img/img/img-lerem.png" alt="">
+            <img src="/static/img/img-lerem.png" alt="">
             <h1>Projeto 2</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
             <button>Veja mais</button>
         </div>
         <div class="card">
-            <img src="/img/img/img-lerem.png" alt="">
+            <img src="/static/img/img-lerem.png" alt="">
             <h1>Projeto 3</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
             <button>Veja mais</button>
         </div>
         <div class="card">
-            <img src="/img/img/img-lerem.png" alt="">
+            <img src="/static/img/img-lerem.png" alt="">
             <h1>Projeto 3</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
             <button>Veja mais</button>
@@ -108,21 +108,22 @@
         <div class="container">
             <form action="">
                 <label for="name"></label>
-                <input placeholder="Nome" name="name" type="text">
+                <input class="login-input" placeholder="Nome" name="name" type="text">
                 <span class="login-input-border"></span>
     
                 <label for="email"></label>
-                <input placeholder="E-mail" name="email" type="email">
+                <input class="login-input" placeholder="E-mail" name="email" type="email">
                 <span class="login-input-border"></span>
     
                 <label for="phone"></label>
-                <input placeholder="Tel." name="phone" type="phone">
+                <input class="login-input" placeholder="Tel." name="phone" type="phone">
                 <span class="login-input-border"></span>
     
-                <label for="msg"></label>
-                <textarea name="msg" id="" placeholder="Digite sua mensagem." cols="30" rows="10"></textarea>
+                <label for="mensagem"></label>
+                <textarea class="login-input" name="mensagem" id="" placeholder="Digite sua mensagem." cols="45" rows="10"></textarea>
                 <span class="login-input-border"></span>
             </form>
+            <button class="login-submit" type="submit">Enviar</button>
         </div>
     </section>
 
