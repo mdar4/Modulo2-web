@@ -11,18 +11,18 @@
 <body>
     <nav class="menu-items">
         <ul>
-            <li><a  href="#">Sobre mim</a></li>
-            <li><a  href="#">Projetos</a></li>
-            <li><a  href="#">Habilidades</a></li>
-            <li><a  href="#">Contato</a></li>
+            <li><a  href="#sobre">Sobre mim</a></li>
+            <li><a  href="#projetos">Projetos</a></li>
+            <li><a  href="#habilidade">Habilidades</a></li>
+            <li><a  href="#contato">Contato</a></li>
         </ul>
     </nav>
     <header class="header-wrapper">
         <h1>Dara Fontoura</h1>
         <h2>Front-end Developer</h2>
         <div class="social-media">
-            <a href="#">Linkedin</a>
-            <a href="#">Github</a>
+            <a href="https://www.linkedin.com/in/dara-fontoura-da-silva-98917b1a6/" target="_blank">Linkedin</a>
+            <a href="https://github.com/mdar4" target="_blank">Github</a>
         </div>
     </header>
 
@@ -38,7 +38,8 @@
         </div>
     </section>
     <hr>
-    <section class="two">
+
+    <section id="sobre" class="two">
         <div class="wrapper">
             <div class="chatbot">
                 <div class="chatbot__loading"></div>
@@ -52,7 +53,8 @@
         </div>
     </section>
     <hr>
-    <section class="project">
+
+    <section id="projetos" class="project">
         <div class="card">
             <img src="/static/img/img-lerem.png" alt="">
             <h1>Projeto 1</h1>
@@ -79,7 +81,8 @@
         </div>
     </section>
     <hr>
-    <section class="hab">
+
+    <section id="habilidade" class="hab">
         <h2>Habilidades Técnicas</h2>
         <p>HTML 5</p>
         <div>
@@ -104,34 +107,41 @@
     </section>
 
     <section id="contato">
-        <h1>Entre em contato.</h1>
+        <h1>Entre em contato</h1>
         <div class="container">
             
-            <form action="/send" method="POST">
+            <form id="form" action='/send' method="POST">
                 <label for="name"></label>
-                <input class="login-input" placeholder="Nome" name="name" type="text">
+                <input class="login-input" id="name" placeholder="Nome" name="name" type="text">
                 <span class="login-input-border"></span>
     
                 <label for="email"></label>
-                <input class="login-input" placeholder="E-mail" name="email" type="email">
+                <input class="login-input" id="email" placeholder="E-mail" name="email" type="email">
                 <span class="login-input-border"></span>
     
                 <label for="phone"></label>
-                <input class="login-input" placeholder="Tel." name="phone" type="phone">
+                <input class="login-input" id="phone" placeholder="Tel." name="phone" type="phone">
                 <span class="login-input-border"></span>
     
                 <label for="mensagem"></label>
-                <textarea class="login-input" name="mensagem" id="" placeholder="Digite sua mensagem." cols="45" rows="10"></textarea>
+                <textarea class="login-input"  name="mensagem" id="mensagem" placeholder="Digite sua mensagem." cols="45" rows="10"></textarea>
                 <span class="login-input-border"></span>
             </form>
-            <button class="login-submit" type="submit">Enviar</button>
+
+            <button class="login-submit" id="enviar" type="submit">Enviar</button>
+
+            <div id="carregamento">
+                <p>Enviando mensagem</p>
+                <div id="loader"></div>
+            </div>
         </div>
     </section>
 
     <footer>
         <hr>
-        <p>Alguns direitos reservados : <a href="https://github.com/mdar4">&copy; Dara Fontoura</a></p>
+        <p>Alguns direitos reservados : <a href="https://github.com/mdar4" target="_blank">&copy; Dara Fontoura</a></p>
     </footer>
-    
+
+    <script type="text/javascript" src="/static/script.js"></script>
 </body>
 </html>

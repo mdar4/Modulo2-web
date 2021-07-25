@@ -255,7 +255,8 @@ section.project {
 }
 /*-------------------------------------------------*/
 .hab {
-    padding: 3rem 10rem 3rem 10rem;
+    width: 92.3%;
+    padding: 3rem ;
     background-color: #c4c0e7;
 }
 .hab h2 {
@@ -268,6 +269,7 @@ section.project {
     font-weight: 600;
 }
 .hab div {
+    width:100%;
     display: flex;
     border: 1px solid #4b086d;
     border-radius: 1rem;
@@ -315,12 +317,13 @@ section.project {
 
 /*---------------------------------------------*/
 section#contato {
-    height: 60vh;
+    height: 70vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 7rem ;
+    margin: 8rem 0 4rem 0;
 }
 
 #contato form {
@@ -378,24 +381,60 @@ section#contato {
 }
 
 .login-submit{
-    height: 4.4vh;
-    width: 10vw;
-    outline: none;
-    background: #4b086d;
-    background-size: 200%;
-    margin-bottom: 32px;
-    color: #fff;
     font-size: 16px;
     font-weight: bold;
-    border: unset;
-    border-radius: 4px;
+    width: 10vw;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid #4b086d;
+    color:#4b086d;
+    border-radius: .4rem;
+    transition: all .4s ease-out;
     cursor: pointer;
-    transition: .3s ease-out;
 }
 
 .login-submit:hover{
-    transform: scale(1.1);
+    background-color: #4b086d;
+    border-radius: .4rem;
+    color: #fff;
 }
+
+section#contato div#carregamento{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  
+  section#contato div#carregamento p{
+    color: #867ed6;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  section#contato div#carregamento div#loader{
+    border: 13px solid #fff;
+    border-radius: 50%;
+    border-top: 13px solid #867ed6;
+    border-bottom: 13px solid #867ed6;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+    }
+    100% { 
+      transform: rotate(360deg); 
+    }
+  }
+  
 footer p {
     min-height: 4rem;
     display: flex;
@@ -416,3 +455,55 @@ footer a:hover {
     margin-top: 3rem;
 }
 
+/*------------------ Página Send------------------------- */
+
+section#success{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(242, 235, 255);
+}
+
+section#success div#card{
+  background-color: rgb(197, 166, 218);
+  text-align: center;
+  padding: 4rem;
+  border-radius: 2rem;
+  color: rgb(139, 72, 184);
+  border-radius: .4rem;
+  width: 40%;
+}
+
+section#success div#card h1{
+  margin: 2rem 0rem;
+}
+
+section#success div#card i{
+  font-size: 5rem;
+}
+
+section#success div#card h3{
+  margin-bottom: 2rem;
+}
+
+section#success div#card p{
+  margin-bottom: 3rem;
+  width: 100%;
+  word-break: break-word;
+}
+
+section#success div#card a{
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid rgb(139, 72, 184);
+  color:rgb(139, 72, 184);
+  border-radius: .4rem;
+  transition: all .4s ease-out;
+}
+
+section#success div#card a:hover{
+  background-color: rgb(139, 72, 184);
+  border-radius: .4rem;
+  color: #fff;
+}

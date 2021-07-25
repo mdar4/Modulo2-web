@@ -1,22 +1,23 @@
-from flask import Flask, render_template, redirect,request
-from flask_mail import Mail,Message
+from flask import Flask, render_template, redirect, request
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
-mail = Mail(app)
+
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": 'seuemail@gmail.com',
-    "MAIL_PASSWORD": 'Suasenha'
+    "MAIL_USERNAME": 'contato.port21@gmail.com',
+    "MAIL_PASSWORD": 'Hotm5445'
 }
 
 app.config.update(mail_settings)
+mail = Mail(app)
 
 class Contato:
-    def __init__(self, nome , email,phone, mensagem):
+    def __init__(self, nome , email, phone, mensagem):
         self.nome =nome
         self.email = email
         self.phone = phone
@@ -26,7 +27,7 @@ class Contato:
 def index():
     return render_template('index.html')
 
-app.route('/send', methods=['POST','GET'])
+app.route('/send', methods=['GET','POST'])
 def send():
     if request.method == 'POST':
         formContato = Contato(
@@ -35,19 +36,19 @@ def send():
             request.form['phone'],
             request.form['mensagem']
         )
+
         msg = Message(
             subject='Contato do portfólio',
             sender=app.config.get('MAIL_USERNAME'),
             recipients=[app.config.get('MAIL_USERNAME')],
-            body=f'''{formContato.nome} com o endereço de email: {formContato.email} e telefones: {formContato.phone} enviou a seguinte mensagem:
+            body=f'''{formContato.nome} com o endereço de email: {formContato.email} e telefone: {formContato.phone} enviou a seguinte mensagem:
             
             {formContato.mensagem}
             '''
         )
         mail.send(msg)
+        return redirect('/#success')
     return render_template('send.html', formContato=formContato)
-#pip install flask_mail
-
 
 if __name__ == '__main__':
     app.run(debug=True)
