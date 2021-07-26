@@ -27,11 +27,11 @@ class Contato:
 def index():
     return render_template('index.html')
 
-app.route('/send', methods=['GET','POST'])
+@app.route('/send', methods=['GET','POST'])
 def send():
     if request.method == 'POST':
         formContato = Contato(
-            request.form['nome'],
+            request.form['name'],
             request.form['email'],
             request.form['phone'],
             request.form['mensagem']
@@ -40,15 +40,20 @@ def send():
         msg = Message(
             subject='Contato do portfólio',
             sender=app.config.get('MAIL_USERNAME'),
-            recipients=[app.config.get('MAIL_USERNAME')],
-            body=f'''{formContato.nome} com o endereço de email: {formContato.email} e telefone: {formContato.phone} enviou a seguinte mensagem:
+            recipients= [app.config.get('MAIL_USERNAME')],
+            body=f'''
+            Oii Dara ! Chegou uma mensagem de : {formContato.nome} 
+            Endereço de email: {formContato.email}
+            Telefone: {formContato.phone}
+
+            Dizendo o seguinte:
             
             {formContato.mensagem}
             '''
         )
         mail.send(msg)
-        return redirect('/#success')
-    return render_template('send.html', formContato=formContato)
+
+        return render_template('send.html', formContato = formContato)
 
 if __name__ == '__main__':
     app.run(debug=True)

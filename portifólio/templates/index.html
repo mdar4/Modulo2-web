@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Style-->
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- OWL -->
+    <link rel="stylesheet" href="/static/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/owl/owl.theme.default.min.css">
     <title>Portifólio</title>
 </head>
 <body>
@@ -17,6 +21,7 @@
             <li><a  href="#contato">Contato</a></li>
         </ul>
     </nav>
+
     <header class="header-wrapper">
         <h1>Dara Fontoura</h1>
         <h2>Front-end Developer</h2>
@@ -54,30 +59,32 @@
     </section>
     <hr>
 
-    <section id="projetos" class="project">
-        <div class="card">
-            <img src="/static/img/img-lerem.png" alt="">
-            <h1>Projeto 1</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
-            <button>Veja mais</button>
-        </div>
-        <div class="card">
-            <img src="/static/img/img-lerem.png" alt="">
-            <h1>Projeto 2</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
-            <button>Veja mais</button>
-        </div>
-        <div class="card">
-            <img src="/static/img/img-lerem.png" alt="">
-            <h1>Projeto 3</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
-            <button>Veja mais</button>
-        </div>
-        <div class="card">
-            <img src="/static/img/img-lerem.png" alt="">
-            <h1>Projeto 3</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
-            <button>Veja mais</button>
+    <section id="projetos" class="project carrossel">
+        <div class="owl-carousel owl-theme">
+            <div class="card">
+                <img  src="/static/img/img-lerem.png" alt="">
+                <h1>Projeto 1</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="card">
+                <img src="/static/img/img-lerem.png" alt="">
+                <h1>Projeto 2</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="card">
+                <img src="/static/img/img-lerem.png" alt="">
+                <h1>Projeto 3</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="card">
+                <img src="/static/img/img-lerem.png" alt="">
+                <h1>Projeto 3</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laborum quae omnis autem libero, suscipit quisquam odio repellendus ab dignissimos porro quod, rerum recusandae quos distinctio unde. Quasi, nulla nihil?</p>
+                <button>Veja mais</button>
+            </div>
         </div>
     </section>
     <hr>
@@ -107,7 +114,10 @@
     </section>
 
     <section id="contato">
-        <h1>Entre em contato</h1>
+        <h2>
+            Entre em <br>
+             contato
+        </h2>
         <div class="container">
             
             <form id="form" action='/send' method="POST">
@@ -126,9 +136,8 @@
                 <label for="mensagem"></label>
                 <textarea class="login-input"  name="mensagem" id="mensagem" placeholder="Digite sua mensagem." cols="45" rows="10"></textarea>
                 <span class="login-input-border"></span>
+                <button  class="login-submit" id="enviar" type="submit">Enviar</button>
             </form>
-
-            <button class="login-submit" id="enviar" type="submit">Enviar</button>
 
             <div id="carregamento">
                 <p>Enviando mensagem</p>
@@ -142,6 +151,10 @@
         <p>Alguns direitos reservados : <a href="https://github.com/mdar4" target="_blank">&copy; Dara Fontoura</a></p>
     </footer>
 
-    <script type="text/javascript" src="/static/script.js"></script>
+    <script src="/static/carousel/jquery.min.js"> </script>
+    <script src="/static/carousel/owl.carousel.min.js"></script>
+    <script src="/static/carousel/setup.js"></script>
+
+    <script type="text/javascript" src="/static/js/script.js"></script>
 </body>
 </html>
