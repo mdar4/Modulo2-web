@@ -8,6 +8,8 @@
 /*-----------------------BASE--------------------------------*/
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    display: block;
   }
 
 /* -------------------------MENU--------------------------- */
@@ -471,7 +473,7 @@ section#success{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height:60vh;
   margin-top: 7rem;
   background-color:#fff;
 }
@@ -484,22 +486,22 @@ section#success div#card{
   color: rgb(139, 72, 184);
   border-radius: .4rem;
   width: 40%;
+  
 }
 
 section#success div#card h1{
   margin: 2rem 0rem;
 }
 
-section#success div#card i{
-  font-size: 5rem;
-}
 
 section#success div#card h3{
   margin-bottom: 2rem;
 }
 
 section#success div#card p{
-  margin-bottom: 3rem;
+  margin:0 3rem  3rem 0;
+  padding: 0 5rem;
+ 
   width: 100%;
   word-break: break-word;
 }
@@ -518,4 +520,5 @@ section#success div#card a:hover{
   border-radius: .4rem;
   color: #fff;
 }
+
 

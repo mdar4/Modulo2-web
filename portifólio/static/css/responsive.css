@@ -59,65 +59,46 @@
            
         }
     /* --------------- send ---------------------------- */
-            
         section#success{
-            /* height: 20vh; */
-            margin: 1rem 1rem;
-            background-color:#fff;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            margin:1rem;
         }
         
         section#success div#card{
-            padding: 10rem;
-            border-radius: 2rem;
-            width: 20%;
+            text-align: center;
+            padding: 14rem;
+            border-radius: 8px;
+            width: 12rem;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
         }
         
         section#success div#card h1{
-            margin: 1rem 0rem;
-            font-size: 18px;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            flex-direction: column;
+            margin-top: 10rem;
+            font-size : 20px;
         }
         
-        section#success div#card i{
-            font-size: 2rem;
-        }
         
         section#success div#card h3{
-            margin-bottom: rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* margin-bottom: 2rem;
+             */
+             display: none;
         }
         
         section#success div#card p{
-            /* margin-bottom: 3rem; */
-            width: 100%;
-            /* height:1rem;; */
-            font-size:1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: justify;
-
-            word-break: break-word;
+           display:none;
         }
         
         section#success div#card a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            /* margin-bottom:1rem; */
-            padding:1rem 6rem;
-            
+            padding: .5rem 3rem;
+            margin: 3rem;
+        
         }
-    
+        
+       
     /* ------------------------Sessão projetos----------------- */
       
         #projetos .card {
@@ -201,7 +182,33 @@
             flex-direction: column;
         }
         
-      
-    
+}
+
+/* @media(max-width:350px){
+    .submit-bottom {
+        padding:0 7rem;
+        margin-right:4rem;
+    }
+    section#success div#card p{
+        margin-bottom: 3rem;
+        width: 100%;
+        height:1rem;;
+        font-size:1rem;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+
+        word-break: break-word;
     }
     
+    section#success div#card a{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-right: 10rem;
+         
+        
+    }
+}
+     */
